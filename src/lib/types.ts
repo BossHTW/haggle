@@ -6,7 +6,7 @@
 // ---------------------------------------------------------------------------
 
 export type AgentHandle =
-  | "@mia/muse-shopper"
+  | "@bo0/muse-shopper"
   | "@bosshtw/concierge"
   | "@bosshtw/pricing-critic"
   | "@bosshtw/inventory"

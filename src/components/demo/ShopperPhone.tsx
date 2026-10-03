@@ -16,8 +16,8 @@ export default function ShopperPhone({ events, scenario, done }: { events: DealE
 
   const visible = events.filter(
     (e) =>
-      (e.from === "@mia/muse-shopper" && (e.kind === "message" || e.kind === "counter" || e.kind === "contact.request")) ||
-      (e.from === "@bosshtw/concierge" && e.mentions?.includes("@mia/muse-shopper") && (e.kind === "offer" || e.kind === "message")) ||
+      (e.from === "@bo0/muse-shopper" && (e.kind === "message" || e.kind === "counter" || e.kind === "contact.request")) ||
+      (e.from === "@bosshtw/concierge" && e.mentions?.includes("@bo0/muse-shopper") && (e.kind === "offer" || e.kind === "message")) ||
       e.kind === "order.created",
   );
 
@@ -40,7 +40,7 @@ export default function ShopperPhone({ events, scenario, done }: { events: DealE
             Find me the {scenario.product.name} in {scenario.product.size}, under {usd(scenario.shopper.budgetUSD)}.
           </div>
           {visible.map((e) => {
-            const mine = e.from === "@mia/muse-shopper";
+            const mine = e.from === "@bo0/muse-shopper";
             if (e.kind === "contact.request")
               return (
                 <div key={e.id} className="pop-in text-center text-[10.5px] text-ink-3">

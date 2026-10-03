@@ -57,7 +57,7 @@ function PriceLadder({ events, list, floor }: { events: DealEvent[]; list: numbe
       <div className="absolute inset-y-0 left-24 right-2">
         {offers.map((o, i) => {
           const p = o.offer!.priceUSD;
-          const shopper = o.from === "@mia/muse-shopper";
+          const shopper = o.from === "@bo0/muse-shopper";
           const x = ((i + 0.5) / offers.length) * 100;
           return (
             <div

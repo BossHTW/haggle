@@ -1,7 +1,7 @@
 {
   "principal": "Mia",
   "agent": "Mia's Muse (simulated Meta Muse)",
-  "bandHandle": "TBD — second Band account /muse-shopper",
+  "bandHandle": "@bo0/muse-shopper",
   "wants": { "sku": "MP-LJ-SAUS-M", "name": "Sausalito Linen Jacket", "size": "M" },
   "budgetUSD": 200,
   "claimedCompetitorPriceUSD": 219,
