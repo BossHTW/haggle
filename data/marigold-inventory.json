@@ -1,0 +1,23 @@
+{
+  "merchant": { "name": "Marigold & Pine", "neighborhood": "Hayes Valley, San Francisco", "bandOwner": "@bosshtw", "currency": "USD" },
+  "policy": {
+    "targetMargin": 0.45,
+    "agingDiscountAfterDays": 40,
+    "agingDiscountPct": 0.0,
+    "pickupIncentiveMaxOccupancyPct": 35,
+    "pickupIncentiveUSD": 8,
+    "belowFloorRequiresOwner": true,
+    "neverAboveList": true,
+    "text": "Marigold & Pine pricing policy: target gross margin 45%. Items on the shelf more than 40 days may be discounted to the margin floor without approval. When the sales floor is below 35% occupancy, Concierge may offer a pickup-today incentive of up to $8 below the shipped floor. Any offer below the floor must be approved by the owner (@bosshtw). Never quote above list price. Prefer bundles over discounts when the shopper is price-sensitive."
+  },
+  "skus": [
+    { "sku": "MP-LJ-SAUS-M", "name": "Sausalito Linen Jacket", "size": "M", "listUSD": 248, "costUSD": 110, "onHand": 7, "daysOnShelf": 48, "weeklyVelocity": 0.4, "tags": ["linen", "jacket", "natural", "outerwear", "spring"], "description": "Relaxed linen jacket in natural flax, horn buttons, patch pockets. Washed for softness; ages beautifully." },
+    { "sku": "MP-SC-LIN-NAT", "name": "Natural Linen Scarf", "listUSD": 48, "costUSD": 14, "onHand": 22, "daysOnShelf": 12, "weeklyVelocity": 3.1, "tags": ["linen", "scarf", "natural", "accessory"], "description": "Lightweight open-weave linen scarf in undyed flax. Pairs with linen outerwear." },
+    { "sku": "MP-TT-CANV", "name": "Canvas Market Tote", "listUSD": 38, "costUSD": 11, "onHand": 31, "daysOnShelf": 20, "weeklyVelocity": 4.0, "tags": ["canvas", "tote", "bag", "natural", "accessory"], "description": "Heavy natural canvas tote with leather handles. Everyday carry for the Ferry Building run." },
+    { "sku": "MP-BT-HORN", "name": "Horn Button Set", "listUSD": 22, "costUSD": 6, "onHand": 40, "daysOnShelf": 60, "weeklyVelocity": 0.8, "tags": ["buttons", "horn", "repair", "accessory"], "description": "Set of six genuine horn buttons, matches the Sausalito jacket." },
+    { "sku": "MP-CR-MUG-SG", "name": "Stoneware Mug, Sage", "listUSD": 34, "costUSD": 12, "onHand": 18, "daysOnShelf": 9, "weeklyVelocity": 5.2, "tags": ["ceramic", "mug", "sage", "home"], "description": "Hand-thrown stoneware mug in sage glaze. Dishwasher safe." },
+    { "sku": "MP-CR-VASE-CR", "name": "Bud Vase, Cream", "listUSD": 42, "costUSD": 15, "onHand": 9, "daysOnShelf": 33, "weeklyVelocity": 1.1, "tags": ["ceramic", "vase", "cream", "home"], "description": "Small cream stoneware bud vase for a single stem." },
+    { "sku": "MP-CD-FIG", "name": "Fig & Cedar Candle", "listUSD": 36, "costUSD": 10, "onHand": 25, "daysOnShelf": 15, "weeklyVelocity": 3.8, "tags": ["candle", "home", "gift"], "description": "Soy candle, fig and cedar, 50-hour burn. The store smells like this." },
+    { "sku": "MP-LJ-SAUS-L", "name": "Sausalito Linen Jacket", "size": "L", "listUSD": 248, "costUSD": 110, "onHand": 3, "daysOnShelf": 48, "weeklyVelocity": 0.6, "tags": ["linen", "jacket", "natural", "outerwear", "spring"], "description": "Relaxed linen jacket in natural flax, horn buttons, patch pockets." }
+  ]
+}

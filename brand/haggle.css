@@ -1,0 +1,48 @@
+/* Haggle brand tokens — drop-in CSS. Mirrors tokens.json and src/app/globals.css in the app. */
+:root {
+  --cream: #fbf6ee; --cream-2: #f3ebdd; --paper: #fffdf8;
+  --ink: #1f1b16; --ink-2: #4a433b; --ink-3: #8a8178; --line: #e6dccb;
+  --marigold: #f2a33a; --marigold-2: #ffd58a; --terracotta: #d96b4a;
+  --sage: #6e8b6b; --sage-2: #dbe6d8; --sky: #3f7d9c; --plum: #9b6bb5;
+  --indigo: #5b6cf0; --indigo-2: #e4e7ff;
+  --success: #2f8f5b; --danger: #c2402e;
+  --dark-card: #2b2620; --dark-line: #3a342c; --dark-callout: #3a2e14;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 1.25rem; --radius-card-lg: 1.5rem; --radius-pill: 999px; --radius-chip: 0.375rem;
+  --shadow-card: 0 1px 0 rgba(31,27,22,.04), 0 8px 24px -12px rgba(31,27,22,.18);
+  --ease-pop: cubic-bezier(.2,.8,.2,1);
+}
+html, body { background: var(--cream); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.h-display { font-family: var(--font-display); font-variation-settings: "opsz" 144, "SOFT" 60; letter-spacing: -0.01em; }
+.h-mono { font-family: var(--font-mono); }
+
+.h-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
+.h-card--dark { background: var(--dark-card); border-color: var(--dark-line); color: var(--cream); box-shadow: none; }
+.h-section--dark { background: var(--ink); color: var(--cream); }
+
+.h-btn { display: inline-flex; align-items: center; gap: .5rem; border-radius: var(--radius-pill); padding: .75rem 1.5rem; font-weight: 600; }
+.h-btn--primary { background: var(--marigold); color: var(--ink); }
+.h-btn--ink { background: var(--ink); color: var(--cream); }
+.h-btn--ghost { background: var(--paper); color: var(--ink-2); border: 1px solid var(--line); }
+
+.h-chip { display: inline-block; border-radius: var(--radius-chip); padding: .125rem .375rem; font-family: var(--font-mono); font-size: 10px; font-weight: 500; border: 1px solid color-mix(in srgb, currentColor 33%, transparent); background: color-mix(in srgb, currentColor 7%, transparent); }
+.h-mention { border-radius: var(--radius-chip); padding: .1em .3em; font-family: var(--font-mono); font-size: .8em; font-weight: 500; background: color-mix(in srgb, currentColor 13%, transparent); }
+
+.h-badge-live { color: var(--success); background: color-mix(in srgb, var(--success) 15%, transparent); }
+.h-badge-replay { color: var(--sky); background: color-mix(in srgb, var(--sky) 10%, transparent); }
+
+.h-avatar { display: grid; place-items: center; border-radius: 50%; width: 32px; height: 32px; font-size: 16px; }
+.h-bubble { border-radius: 1rem; border-top-left-radius: .25rem; padding: .5rem .75rem; background: var(--paper); color: var(--ink-2); }
+.h-section--dark .h-bubble { background: var(--dark-card); color: var(--cream); }
+
+@keyframes h-pop-in { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes h-pulse-ring { from { box-shadow: 0 0 0 0 rgba(242,163,58,.55); } to { box-shadow: 0 0 0 14px rgba(242,163,58,0); } }
+@keyframes h-count-up { from { opacity: .2; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.h-pop-in { animation: h-pop-in 320ms var(--ease-pop) both; }
+.h-pulse-ring { animation: h-pulse-ring 1.4s ease-out infinite; }
+.h-count-up { animation: h-count-up 420ms ease-out both; }
+@media (prefers-reduced-motion: reduce) { .h-pop-in, .h-pulse-ring, .h-count-up { animation: none; } }

@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ---------- Haggle brand tokens: warm, playful, legible across a room ---------- */
+:root {
+  --cream: #fbf6ee;
+  --cream-2: #f3ebdd;
+  --paper: #fffdf8;
+  --ink: #1f1b16;
+  --ink-2: #4a433b;
+  --ink-3: #8a8178;
+  --line: #e6dccb;
+  --marigold: #f2a33a;
+  --marigold-2: #ffd58a;
+  --terracotta: #d96b4a;
+  --sage: #6e8b6b;
+  --sage-2: #dbe6d8;
+  --sky: #3f7d9c;
+  --plum: #9b6bb5;
+  --indigo: #5b6cf0;
+  --indigo-2: #e4e7ff;
+  --success: #2f8f5b;
+  --danger: #c2402e;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-2: var(--cream-2);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-marigold: var(--marigold);
+  --color-marigold-2: var(--marigold-2);
+  --color-terracotta: var(--terracotta);
+  --color-sage: var(--sage);
+  --color-sage-2: var(--sage-2);
+  --color-sky: var(--sky);
+  --color-plum: var(--plum);
+  --color-indigo: var(--indigo);
+  --color-indigo-2: var(--indigo-2);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --shadow-card: 0 1px 0 rgba(31, 27, 22, 0.04), 0 8px 24px -12px rgba(31, 27, 22, 0.18);
+  --radius-xl2: 1.25rem;
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+}
+
+/* paper grain */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: radial-gradient(rgba(31, 27, 22, 0.06) 0.5px, transparent 0.5px);
+  background-size: 6px 6px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+/* chat bubble entrance */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.pop-in {
+  animation: pop-in 320ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 163, 58, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgba(242, 163, 58, 0);
+  }
+}
+.pulse-ring {
+  animation: pulse-ring 1.4s ease-out infinite;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+.dot {
+  animation: typing 1.1s infinite ease-in-out;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0.2;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.count-up {
+  animation: count-up 420ms ease-out both;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pop-in,
+  .pulse-ring,
+  .dot,
+  .count-up {
+    animation: none;
+  }
+}

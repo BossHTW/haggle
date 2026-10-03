@@ -1,0 +1,12 @@
+{
+  "principal": "Mia",
+  "agent": "Mia's Muse (simulated Meta Muse)",
+  "bandHandle": "TBD — second Band account /muse-shopper",
+  "wants": { "sku": "MP-LJ-SAUS-M", "name": "Sausalito Linen Jacket", "size": "M" },
+  "budgetUSD": 200,
+  "claimedCompetitorPriceUSD": 219,
+  "acceptance": { "maxShippedUSD": 205, "maxPickupUSD": 199, "pickupPossibleBefore": "18:00", "arrivesAt": "17:30" },
+  "maxCounters": 2,
+  "paymentMethod": { "type": "tokenized_card", "token": "tok_visa", "mode": "test" },
+  "consent": { "signedIntent": true, "sharesBudget": true, "sharesSize": true }
+}
