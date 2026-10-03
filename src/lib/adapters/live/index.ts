@@ -1,12 +1,12 @@
 // ---------------------------------------------------------------------------
-// LIVE adapters — TO BE IMPLEMENTED BY CODEX. See docs/CODEX_BRIEF.md.
+// LIVE adapters — TO BE IMPLEMENTED BY ANTIGRAVITY. See docs/ANTIGRAVITY_BRIEF.md.
 //
 // Contract: export createLiveAdapters(): Adapters. If a required env var is
 // missing, throw — getAdapters() will fall back to replay and log a warning.
 //
 //   Band      → events.stream(): subscribe to the Deal Room over the Band
 //               WebSocket / SDK, map Band messages to DealEvent (see
-//               docs/CODEX_BRIEF.md §3 for the mapping table).
+//               docs/ANTIGRAVITY_BRIEF.md §3 for the mapping table).
 //   ZooWork   → each @bosshtw/* agent is a ZooWork managed agent; the Band
 //               adapter for each agent forwards @mentions into a ZooWork
 //               session and posts the reply back to the room.
@@ -22,5 +22,5 @@ export function createLiveAdapters(): Adapters {
   const required = ["BAND_API_KEY", "BAND_AGENT_ID", "ZOOWORK_API_KEY"];
   const missing = required.filter((k) => !process.env[k]);
   if (missing.length) throw new Error(`live adapters: missing env ${missing.join(", ")}`);
-  throw new Error("live adapters not implemented yet — see docs/CODEX_BRIEF.md");
+  throw new Error("live adapters not implemented yet — see docs/ANTIGRAVITY_BRIEF.md");
 }
